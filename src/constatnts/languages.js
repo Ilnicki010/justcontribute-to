@@ -1,7 +1,7 @@
 const languages = [
   { value: "javascript", label: "Javascript" },
   { value: "python", label: "Python" },
-  { value: "rust", label: "R
+  { value: "rust", label: "Rust" },
   { value: "csharp", label: "C#" },
   { value: "golang", label: "Golang" },
   { value: "java", label: "Java" },
