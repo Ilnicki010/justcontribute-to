@@ -1,0 +1,23 @@
+.wrapper {
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  margin-bottom: 20px;
+}
+.title {
+  padding: 10px 10px;
+  color: #fff;
+  margin-top: 0;
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+  line-height: 1;
+  margin: 0;
+}
+@media screen and (max-width: 720px) {
+  //   .title::before {
+  //     left: 0;
+  //     width: 100%;
+  //     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  //   }
+}

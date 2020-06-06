@@ -1,0 +1,62 @@
+.wrapper {
+  background: rgba(128, 128, 128, 0.137);
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.buttonWrapper {
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+.issueHeader {
+  display: flex;
+  justify-content: space-between;
+  .issueTitle {
+    flex: 3;
+    margin-top: 0;
+  }
+}
+.labelsList {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  .labelWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+  }
+  .labelColor {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .labelItem {
+    font-size: 0.8rem;
+    border-radius: 4px;
+    padding: 6px 10px;
+  }
+}
+.bodyText {
+  word-break: break-all;
+  margin-bottom: 40px;
+  padding-left: 10px;
+  border-left: 2px solid #000;
+}
+.issueDateWrapper {
+  display: flex;
+}
+.issueDate {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin: 0 10px;
+  z-index: -99;
+}
+@media screen and (max-width: 720px) {
+  .issueHeader {
+    flex-direction: column;
+  }
+}

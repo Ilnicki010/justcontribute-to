@@ -1,0 +1,19 @@
+.contentWrapper {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: space-around;
+}
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  &Element {
+    padding: 10px 0;
+    a {
+      color: #5067e9;
+    }
+  }
+}
+.resourceType {
+  flex: 1;
+}

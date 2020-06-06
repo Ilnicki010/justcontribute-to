@@ -1,0 +1,37 @@
+.button {
+  font-weight: 500;
+  color: #fff;
+  background: #000;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 12px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.15s;
+  img {
+    margin-left: 10px;
+  }
+  &:hover {
+    background: #5067e9;
+    color: #fff;
+    a {
+      color: #fff;
+    }
+  }
+  &Secondary {
+    @extend .button;
+    color: #000;
+    border: 2px solid #000;
+    background: transparent;
+    &White {
+      @extend .buttonSecondary;
+      color: #fff;
+      border-color: #fff;
+    }
+  }
+}

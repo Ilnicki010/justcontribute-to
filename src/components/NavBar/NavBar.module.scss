@@ -1,0 +1,18 @@
+.wrapper {
+  position: sticky;
+  top: 20px;
+}
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    border-radius: 3px;
+    padding: 0 15px;
+    color: rgb(45, 16, 68);
+    margin: 10px 0;
+    a {
+      color: #000;
+    }
+  }
+}

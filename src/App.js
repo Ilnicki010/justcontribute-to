@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Home from "./views/Home/Home";
+import HowWorks from "./views/HowWorks/HowWorks";
+import Resources from "./views/Resources/Resources";
+import WhyContribute from "./views/WhyContribute/WhyContribute";
+
+import Footer from "./components/Footer/Footer";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import CacheRoute, { CacheSwitch } from "react-router-cache-route";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <div style={{ padding: "40px" }}>
+          <CacheSwitch>
+            <CacheRoute exact path="/" component={Home}></CacheRoute>
+            <Route exact path="/how-it-works" component={HowWorks}></Route>
+            <Route exact path="/resources" component={Resources}></Route>
+            <Route
+              exact
+              path="/why-contribute"
+              component={WhyContribute}
+            ></Route>
+          </CacheSwitch>
+        </div>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
