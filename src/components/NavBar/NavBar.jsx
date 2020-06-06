@@ -25,10 +25,23 @@ export default function NavBar({
             <Button secondary>Great resources about OS</Button>
           </Link>
         </li>
-        <li>
-          <Button secondary>About the project</Button>
-        </li>
-        {social && <></>}
+        {social && (
+          <>
+            <li>
+              <a
+                className={styles.bmcButton}
+                target="_blank"
+                href="https://www.buymeacoffee.com/dominikilnicki"
+              >
+                <img
+                  src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg"
+                  alt="Buy me a coffee"
+                />
+                <span style={{ marginLeft: "10px" }}> Buy me a coffee</span>
+              </a>
+            </li>
+          </>
+        )}
       </ul>
     </nav>
   );

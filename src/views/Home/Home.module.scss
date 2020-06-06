@@ -24,6 +24,7 @@
   display: block;
   font-weight: 500;
   margin: 20px 0;
+  word-break: break-word;
 }
 .loaderWrapper {
   width: 100%;
@@ -39,11 +40,8 @@
   }
 }
 @media screen and (max-width: 720px) {
-  .wrapper {
-    padding: 20px;
-  }
   .contentWrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }

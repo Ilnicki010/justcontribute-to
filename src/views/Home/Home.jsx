@@ -3,13 +3,13 @@ import axios from "axios";
 import styles from "./Home.module.scss";
 import SingleIssue from "../../components/SingleIssue/SingleIssue";
 import Form from "../../components/Form/Form";
-import ExternalLinkIcon from "../../components/ExternalLinkIcon/ExternalLinkIcon";
 import NavBar from "../../components/NavBar/NavBar";
 import Button from "../../components/Button/Button";
 import Title from "../../components/Title/Title";
 import Intro from "../../components/Intro/Intro";
 import Loader from "../../components/Loader/Loader";
 import Footer from "../../components/Footer/Footer";
+import RepositoryInfo from "../../components/RepositoryInfo/RepositoryInfo";
 
 import Header from "../../components/Header/Header";
 
@@ -81,10 +81,7 @@ export default function Home() {
                           ""
                         )}`}
                       >
-                        <span>
-                          {item[0].replace("https://api.github.com/repos/", "")}
-                        </span>
-                        <ExternalLinkIcon fill="#000" size="18px" />
+                        <RepositoryInfo url={item[0]} />
                       </a>
                       <div className={styles.issuesList}>
                         {item[1].map(
