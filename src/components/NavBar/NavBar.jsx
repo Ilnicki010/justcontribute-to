@@ -15,11 +15,11 @@ export default function NavBar({
             <Button secondary>How it works</Button>
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="why-contribute">
             <Button secondary>Why should you contribute</Button>
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link to="resources">
             <Button secondary>Great resources about OS</Button>

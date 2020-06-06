@@ -34,8 +34,9 @@ export default function Intro() {
           <div>
             <h2>Browse issues & find best fit for you</h2>
             <p>
-              You can browse all the issue from different repos that are
-              labelled
+              You can browse all the open issues from different repos that are
+              meant for new newcomers. You can read more about which issues we
+              fetch on <Link to="how-it-works"> how it works page</Link>
             </p>
           </div>
         </div>
