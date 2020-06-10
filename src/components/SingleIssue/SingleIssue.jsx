@@ -44,7 +44,10 @@ export default function SingleIssue({
         ))}
       </ul>
       <p className={styles.bodyText}>{body}</p>
-      <div className={styles.buttonWrapper}>
+      <div
+        className={styles.buttonWrapper}
+        onClick={() => window.analytics.track("Go to issue clicked")}
+      >
         <Button href={issue_url}>
           Go to issue <ExternalLinkIcon fill="#fff" size="12px" />
         </Button>

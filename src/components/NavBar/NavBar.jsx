@@ -36,7 +36,7 @@ export default function NavBar({
         </li>
         {social && (
           <>
-            <li>
+            <li onClick={() => window.analytics.track("Donate clicked")}>
               <a
                 className={styles.bmcButton}
                 rel="noopener noreferrer"

@@ -8,7 +8,6 @@ import Button from "../../components/Button/Button";
 import Title from "../../components/Title/Title";
 import Intro from "../../components/Intro/Intro";
 import Loader from "../../components/Loader/Loader";
-import Footer from "../../components/Footer/Footer";
 import RepositoryInfo from "../../components/RepositoryInfo/RepositoryInfo";
 
 import Header from "../../components/Header/Header";
@@ -18,7 +17,15 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [showIntro, setShowIntro] = useState(true);
 
+  useEffect(() => {
+    window.analytics.page("Home");
+  }, []);
+
   function searchIssues(language, popularity) {
+    window.analytics.track("Search for issue", {
+      language,
+      popularity,
+    });
     setLoading(true);
     axios
       .post(
@@ -72,17 +79,23 @@ export default function Home() {
                   </Title>
                   {Object.entries(results.items).map((item) => (
                     <div key={item}>
-                      <a
-                        className={styles.repoName}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={`https://github.com/${item[0].replace(
-                          "https://api.github.com/repos/",
-                          ""
-                        )}`}
+                      <div
+                        onClick={() =>
+                          window.analytics.track("Go to repo clicked")
+                        }
                       >
-                        <RepositoryInfo url={item[0]} />
-                      </a>
+                        <a
+                          className={styles.repoName}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={`https://github.com/${item[0].replace(
+                            "https://api.github.com/repos/",
+                            ""
+                          )}`}
+                        >
+                          <RepositoryInfo url={item[0]} />
+                        </a>
+                      </div>
                       <div className={styles.issuesList}>
                         {item[1].map(
                           ({

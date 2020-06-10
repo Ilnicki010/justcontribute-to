@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Intro from "../../components/Intro/Intro";
 import Header from "../../components/Header/Header";
 import Title from "../../components/Title/Title";
 import BackLink from "../../components/BackLink/BackLink";
 export default function HowWorks() {
+  useEffect(() => {
+    window.analytics.page("How it works");
+  }, []);
   return (
     <main>
       <BackLink />

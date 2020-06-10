@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Title from "../../components/Title/Title";
 import Header from "../../components/Header/Header";
 import BackLink from "../../components/BackLink/BackLink";
@@ -7,6 +7,10 @@ import { Helmet } from "react-helmet";
 import styles from "./Resources.module.scss";
 
 export default function Resources() {
+  useEffect(() => {
+    window.analytics.page("Resources");
+  }, []);
+
   return (
     <main>
       <Helmet>
