@@ -12,10 +12,13 @@
   flex-direction: column;
   padding: 0 10px;
 }
-.repoName {
-  font-size: 1.4rem;
+.repoNameWrapper {
   position: sticky;
   top: 0;
+}
+.repoName {
+  font-size: 1.4rem;
+
   background: #fff;
   padding: 20px 0;
   z-index: 0;

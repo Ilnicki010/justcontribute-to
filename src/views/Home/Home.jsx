@@ -80,6 +80,7 @@ export default function Home() {
                   {Object.entries(results.items).map((item) => (
                     <div key={item}>
                       <div
+                        className={styles.repoNameWrapper}
                         onClick={() =>
                           window.analytics.track("Go to repo clicked")
                         }
@@ -111,7 +112,11 @@ export default function Home() {
                               key={id}
                               title={title}
                               labels={labels}
-                              body={body.slice(0, 300)}
+                              body={
+                                body
+                                  ? body.slice(0, 300)
+                                  : "Description is empty"
+                              }
                               created_at={created_at}
                               updated_at={updated_at}
                               issue_url={html_url}
