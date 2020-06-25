@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Footer.module.scss";
-import NavBar from "../NavBar/NavBar";
 export default function Footer() {
   return (
     <footer className={styles.wrapper}>

@@ -4,7 +4,6 @@ import styles from "./Home.module.scss";
 import SingleIssue from "../../components/SingleIssue/SingleIssue";
 import Form from "../../components/Form/Form";
 import NavBar from "../../components/NavBar/NavBar";
-import Button from "../../components/Button/Button";
 import Title from "../../components/Title/Title";
 import Intro from "../../components/Intro/Intro";
 import Loader from "../../components/Loader/Loader";
