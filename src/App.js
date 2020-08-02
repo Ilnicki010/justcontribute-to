@@ -7,6 +7,7 @@ import styles from "./App.module.scss";
 import Footer from "./components/Footer/Footer";
 import { BrowserRouter, Route } from "react-router-dom";
 import CacheRoute, { CacheSwitch } from "react-router-cache-route";
+import CookiesInfo from "./components/CookiesInfo/CookiesInfo";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         </div>
         <Footer />
       </BrowserRouter>
+      <CookiesInfo />
     </div>
   );
 }
